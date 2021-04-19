@@ -1,0 +1,147 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: #234652 url(https://designshack.net/tutorialexamples/letitsnow/snow.png);
+	animation: stars 25s linear infinite;
+}
+@keyframes stars {
+	0%{
+		background-position: 0;
+	}
+	100%{
+		background-position: 100%;
+	}
+}
+.top_content {
+	position: relative;
+	width: 100%;
+	height: 640px;
+	overflow: hidden;
+}
+.center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+h1 {
+	font-size: 6em;
+	color: #fff;
+	position: absolute;
+	top: -10px;
+	right: 280px;
+	font-family: 'Bad Script', cursive;
+}
+.moon {
+	position: relative;
+	width: 150px;
+	height: 150px;
+	background: white;
+	border-radius: 50%;
+}
+.moon:before {
+	content: '';
+	position: absolute;
+	top: -15px;
+	right: -15px;
+	background: #234652;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+.moon:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -325px;
+	height: 100%;
+	width: 400px;
+	background: linear-gradient(to left, rgba(0,0,0,.4) 0%, rgba(0,0,0,0)100%);
+	z-index: -1;
+	transform-origin: right;
+	transform: rotate(-45deg);
+}
+.cloud-left {
+	position: absolute;
+	color: white;
+	left: -260%;
+	top:-120%;
+	font-size: 12em;
+}
+.cloud-left:after{
+	content: '';
+	top: 5px;
+	left: -420px;
+	position: absolute;
+	height: 175px;
+	width: 560px;
+	background: linear-gradient(to left, rgba(0,0,0,.4) 0%, rgba(0,0,0,0)100%);
+	z-index: -1;
+	transform-origin: right;
+	transform: rotate(-45deg);
+}
+.cloud-right {
+	position: absolute;
+	color: white;
+	right: -230%;
+	top: -30%;
+	font-size: 8em;
+}
+.cloud-right:after{
+	content: '';
+	top: 5px;
+	right: 44px;
+	position: absolute;
+	height: 115px;
+	width: 460px;
+	background: linear-gradient(to left, rgba(0,0,0,.4) 0%, rgba(0,0,0,0)100%);
+	z-index: -1;
+	transform-origin: right;
+	transform: rotate(-45deg);
+}
+/*beginning of comet*/
+.comet {
+  position: absolute;
+  z-index: 1;
+  top: -160px;
+  left: -215px;
+  border-radius: 50%;
+  margin: 200px;
+  background: yellow;
+  width: 3px;
+  height: 2px;
+  -webkit-transform: rotate(30deg);
+  transform: rotate(00deg);
+  background: -webkit-radial-gradient(center ellipse, rgba(255, 255, 255, 0.5) 0%, rgba(246, 246, 246, 0.83) 47%, rgba(237, 237, 237, 0.63) 100%);
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.5) 0%, rgba(246, 246, 246, 0.83) 47%, rgba(237, 237, 237, 0.63) 100%);
+  box-shadow: -60px 0px 6px 30px #fff;
+  animation: comet 5s linear infinite;
+}
+
+@keyframes comet {
+  
+  0% {
+    -webkit-transform: translate(0px, 0px) rotate(0deg);
+            transform: translate(0px, 0px) rotate(0deg);
+            box-shadow: -6px 0px 4px 1px #fff;
+            background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.9) 0%, rgba(246, 246, 246, 0.83) 47%, rgba(237, 237, 237, 0.63) 100%);
+  } 
+  45% {
+    -webkit-transform: translate(20px, -20px) rotate(30deg);
+            transform: translate(20px, -20px) rotate(30deg);
+            box-shadow: -6px 0px 4px 1px #fff;
+            background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.8) 0%, rgba(246, 246, 246, 0.83) 47%, rgba(237, 237, 237, 0.63) 100%);
+  }
+  95% {
+    -webkit-transform: translate(1460px, 130px) rotate(30deg);
+            transform: translate(1460px, 130px) rotate(30deg);
+            box-shadow: -6px 0px 4px 1px #fff;
+            background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.5) 0%, rgba(246, 246, 246, 0.83) 47%, rgba(237, 237, 237, 0.63) 100%);
+  }
+  100% {
+    -webkit-transform: translate(1460px, 130px) rotate(30deg);
+            transform: translate(1460px, 130px) rotate(30deg);
+            box-shadow: none;
+            background: none;
+  }
+/*end of comet*/
